@@ -9,7 +9,7 @@ import pandas as pd
 
 
 def load_foods(cols):
-    foods = pd.read_csv('food/static/food/FOOD_DES.txt',sep=',',  header=None,  usecols = cols)
+    foods = pd.read_csv('food/static/food/FOOD_DES.txt',sep=',',  names = cols)
     return foods
 
 def load_defs(cols):
@@ -17,7 +17,7 @@ def load_defs(cols):
     return dbcol
     
 def load_nut(cols):
-    nutrition = pd.read_csv('food/static/food/NUT_DAT.csv', sep = ',', header=None, usecols = cols)
+    nutrition = pd.read_csv('food/static/food/NUT_DAT.csv', sep = ',', names = cols)
     return nutrition
 
 
@@ -72,14 +72,25 @@ def find_food_name(food_name):
                 content.append(food[2])
             
     return content
+    
+def dict_food_codes():
+    food_codes = load_foods(['code','group','name','desc0','desc1','desc2','desc3','desc4','desc5','desc6','desc7','desc8','desc9'])
+    content = {}
+    for index, food_code in food_codes.iterrows():
+        desc = ""
+        for i in range(10):
+            desc_index = 'desc' + str(i)
+            if type(food_code[desc_index]) is str:
+                desc += food_code[desc_index].lower() + " "
+        content[food_code['code']] =  food_code['name'].lower() + ' (' + desc + ')'
+    print(content)
 
 def dict_test_codes():
     test_codes = load_defs(['code','unit','abrev','name'])
     content = {}
     for index, test_code in test_codes.iterrows():
-        # print(test_code['code'])
         content[test_code['code']] =  test_code['name'].lower() + ' (' + test_code['unit'] + ')'
     print(content)   
 
-dict_test_codes()
+dict_food_codes()
 
