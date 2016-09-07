@@ -1,91 +1,91 @@
-203 g PROCNT protein
-204 g FAT lipid
-205 g CHOCDF carbohydrate
-207 g ASH Ash 
-208 kcal ENERC_KCAL energy
-209 g STARCH starch
-210 g SUCS sucrose
-211 g GLUS glucose
-212 g FRUS fructose
-213 g LACS lactose
-214 g MALS maltose
-221 g ALC alcohol
-255 g WATER water
-262 mg CAFFN caffeine
-263 mg THEBRN theobromine
-269 g SUGAR sugars
-287 g GALS galactose
-291 g FIBTG fiber
-301 mg CA calcium
-303 mg FE iron
-304 mg MG magnesium
-305 mg P phosphorus
-306 mg K potassium
-307 mg NA sodium
-309 mg ZN zinc
-312 mg CU copper
-313 µg FLD fluoride
-315 mg MN manganese
-317 µg SE selenium
-318 IU VITA_IU Vitamin_A
-319 µg RETOL retinol
-320 µg VITA_RAE Vitamin_A
-321 µg CARTB betaCarotene
-322 µg CARTA alphaCarotene 
-323 mg TOCPHA tocopherol
-325 µg ERGCAL ergocalciferol
-326 µg CHOCAL cholecalciferol
-328 µg VITD Vitamin_D
-334 µg CRYPX betaCryptoxanthin 
-337 µg LYCPN Lycopene
-338 µg LUT+ZEA Lutein
-341 mg TOCPHB betaTocopherol
-342 mg TOCPHG gammaTocopherol
-343 mg TOCPHD deltaTocopherol 
-344 mg TOCTRA alphaTocotrienol
-345 mg TOCTRB betaTocotrienol
-346 mg TOCTRG gammaTocotrienol 
-347 mg TOCTRD deltaTocotrienol
-401 mg VITC ascorbic_acid
-404 mg THIA thiamin
-405 mg RIBF riboflavin 
-406 mg NIA niacin
-410 mg PANTAC Pantothenic_acid
-415 mg VITB6A Vitamin_B-6
-417 µg FOL Folate
-418 µg VITB12 Vitamin_B-12
-421 mg CHOLN Choline
-428 µg MK4 Menaquinone-4
-429 µg VITK1D Dihydrophylloquinone
-430 µg VITK1 Vitamin_K
-431 µg FOLAC Folic_acid
-432 µg FOLFD Folate
-454 mg BETN Betaine
-501 g TRP_G Tryptophan
-502 g THR_G Threonine
-503 g ILE_G Isoleucine
-504 g LEU_G Leucine
-505 g LYS_G Lysine
-506 g MET_G Methionine
-507 g CYS_G Cystine
-508 g PHE_G Phenylalanine
-509 g TYR_G Tyrosine
-510 g VAL_G Valine
-511 g ARG_G Arginine
-512 g HISTN_G Histidine
-513 g ALA_G Alanine
-514 g ASP_G Aspartic_acid
-515 g GLU_G Glutamic_acid
-516 g GLY_G Glycine
-517 g PRO_G Proline
-518 g SER_G Serine
-521 g HYP Hydroxyproline
-601 mg CHOLE Cholesterol
-636 mg PHYSTR Phytosterols
-638 mg STID7 Stigmasterol 
-639 mg CAMD5 Campesterol
-641 mg SITSTR Beta-sitosterol
-645 g FAMS monounsaturated_Fatty_acids
-646 g FAPU polyunsaturated_Fatty_acids
-693 g FATRNM trans-monoenoic_Fatty_acids
-695 g FATRNP trans-polyenoic_Fatty_acids
+203,g,PROCNT,protein
+204,g,FAT,lipid
+205,g,CHOCDF,carbohydrate
+207,g,ASH,Ash,
+208,kcal,ENERC_KCAL,energy
+209,g,STARCH,starch
+210,g,SUCS,sucrose
+211,g,GLUS,glucose
+212,g,FRUS,fructose
+213,g,LACS,lactose
+214,g,MALS,maltose
+221,g,ALC,alcohol
+255,g,WATER,water
+262,mg,CAFFN,caffeine
+263,mg,THEBRN,theobromine
+269,g,SUGAR,sugars
+287,g,GALS,galactose
+291,g,FIBTG,fiber
+301,mg,CA,calcium
+303,mg,FE,iron
+304,mg,MG,magnesium
+305,mg,P,phosphorus
+306,mg,K,potassium
+307,mg,NA,sodium
+309,mg,ZN,zinc
+312,mg,CU,copper
+313,µg,FLD,fluoride
+315,mg,MN,manganese
+317,µg,SE,selenium
+318,IU,VITA_IU,Vitamin_A
+319,µg,RETOL,retinol
+320,µg,VITA_RAE,Vitamin_A
+321,µg,CARTB,betaCarotene
+322,µg,CARTA,alphaCarotene
+323,mg,TOCPHA,tocopherol
+325,µg,ERGCAL,ergocalciferol
+326,µg,CHOCAL,cholecalciferol
+328,µg,VITD,Vitamin_D
+334,µg,CRYPX,betaCryptoxanthin
+337,µg,LYCPN,Lycopene
+338,µg,LUT+ZEA,Lutein
+341,mg,TOCPHB,betaTocopherol
+342,mg,TOCPHG,gammaTocopherol
+343,mg,TOCPHD,deltaTocopherol
+344,mg,TOCTRA,alphaTocotrienol
+345,mg,TOCTRB,betaTocotrienol
+346,mg,TOCTRG,gammaTocotrienol
+347,mg,TOCTRD,deltaTocotrienol
+401,mg,VITC,ascorbic_acid
+404,mg,THIA,thiamin
+405,mg,RIBF,riboflavin
+406,mg,NIA,niacin
+410,mg,PANTAC,Pantothenic_acid
+415,mg,VITB6A,Vitamin_B-6
+417,µg,FOL,Folate
+418,µg,VITB12,Vitamin_B-12
+421,mg,CHOLN,Choline
+428,µg,MK4,Menaquinone-4
+429,µg,VITK1D,Dihydrophylloquinone
+430,µg,VITK1,Vitamin_K
+431,µg,FOLAC,Folic_acid
+432,µg,FOLFD,Folate
+454,mg,BETN,Betaine
+501,g,TRP_G,Tryptophan
+502,g,THR_G,Threonine
+503,g,ILE_G,Isoleucine
+504,g,LEU_G,Leucine
+505,g,LYS_G,Lysine
+506,g,MET_G,Methionine
+507,g,CYS_G,Cystine
+508,g,PHE_G,Phenylalanine
+509,g,TYR_G,Tyrosine
+510,g,VAL_G,Valine
+511,g,ARG_G,Arginine
+512,g,HISTN_G,Histidine
+513,g,ALA_G,Alanine
+514,g,ASP_G,Aspartic_acid
+515,g,GLU_G,Glutamic_acid
+516,g,GLY_G,Glycine
+517,g,PRO_G,Proline
+518,g,SER_G,Serine
+521,g,HYP,Hydroxyproline
+601,mg,CHOLE,Cholesterol
+636,mg,PHYSTR,Phytosterols
+638,mg,STID7,Stigmasterol
+639,mg,CAMD5,Campesterol
+641,mg,SITSTR,Beta-sitosterol
+645,g,FAMS,monounsaturated_Fatty_acids
+646,g,FAPU,polyunsaturated_Fatty_acids
+693,g,FATRNM,trans-monoenoic_Fatty_acids
+695,g,FATRNP,trans-polyenoic_Fatty_acids
