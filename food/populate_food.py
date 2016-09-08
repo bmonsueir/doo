@@ -34,10 +34,13 @@ def dict_food_codes():
     content = {}
     for index, food_code in food_codes.iterrows():
         desc = ""
+        Y = False
         for i in range(10):
             desc_index = 'desc' + str(i)
-            if type(food_code[desc_index]) is str:
-                desc += food_code[desc_index].lower() + " "
+            if food_code[desc_index] == 'Y' or Y:
+                Y = True
+            else:
+                desc += str(food_code[desc_index]).lower() + " "
         content[food_code['code']] =  food_code['name'].lower() + ' (' + desc + ')'
     return content
 
@@ -45,7 +48,7 @@ def dict_test_codes():
     test_codes = load_defs(['code','unit','abrev','name'])
     content = {}
     for index, test_code in test_codes.iterrows():
-        content[test_code['code']] =  str(test_code['name']) + ' (' + str(test_code['unit']) + ')'
+        content[test_code['code']] =  str(test_code['abrev']) 
     return content
 
 def add_all():
@@ -57,13 +60,14 @@ def add_all():
     # print(tests)
     for index, item in nutrition.iterrows():
         if item['food'] != last:
-            # food = Food(context)
+            food = Food(context)
             # food.save()
             print(context)
             context = {}
             break
         if context == {}:
-            context['id'] = item['food']
+            food_code = int(item['food'])
+            context['name'] = foods[food_code]
         test_code = int(item['test'])
         test_name = tests[test_code]
         context[test_name] = round(item['value'], 3)
@@ -74,3 +78,9 @@ def add_all():
     # print(tests)
         
 add_all()
+
+def test_name():
+    tests = load_defs(['code','unit','abrev','name'])
+    for index, test in tests.iterrows():
+        print(test['abrev'])
+        

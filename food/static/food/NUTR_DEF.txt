@@ -1,17 +1,17 @@
 203 , g , PROCNT , Protein
-204 , g , FAT , Total lipid
+204 , g , FAT , Total_lipid
 205 , g , CHOCDF , Carbohydrate
 207 , g , ASH , Ash
 208 , kcal , ENERC_KCAL , Energy
 209 , g , STARCH , Starch
 210 , g , SUCS , Sucrose
-211 , g , GLUS , Glucose (dextrose)
+211 , g , GLUS , Glucose_dextrose
 212 , g , FRUS , Fructose
 213 , g , LACS , Lactose
 214 , g , MALS , Maltose
-221 , g , ALC , Alcohol ethyl
+221 , g , ALC , Alcohol_ethyl
 255 , g , WATER , Water
-257 , g , Adjusted Protein
+257 , g , Adjusted_Protein, Adjusted_Protein
 262 , mg , CAFFN , Caffeine
 263 , mg , THEBRN , Theobromine
 268 , kJ , ENERC_KJ , Energy
@@ -29,7 +29,7 @@
 313 , µg , FLD , Fluoride
 315 , mg , MN , Manganese
 317 , µg , SE , Selenium 
-318 , IU , VITA_IU , Vitamin A 
+318 , IU , VITA_IU , Vitamin_A 
 319 , µg , RETOL , Retinol
 320 , µg , VITA_RAE , Vitamin A 
 321 , µg , CARTB , Carotene beta 
@@ -41,7 +41,7 @@
 328 , µg , VITD , Vitamin D 
 334 , µg , CRYPX , Cryptoxanthin 
 337 , µg , LYCPN , Lycopene 
-338 , µg , LUT+ZEA , Lutein 
+338 , µg , LUT_ZEA , Lutein 
 341 , mg , TOCPHB , Tocopherol  beta 
 342 , mg , TOCPHG , Tocopherol  gamma 
 343 , mg , TOCPHD , Tocopherol  delta 
@@ -84,8 +84,8 @@
 517 , g , PRO_G , Proline
 518 , g , SER_G , Serine
 521 , g , HYP , Hydroxyproline
-573 , mg , Vitamin E , Vitamin E
-578 , µg , Vitamin B-12, Vitamin B-12
+573 , mg , Vitamin_E , Vitamin E
+578 , µg , Vitamin_B_12, Vitamin B-12
 601 , mg , CHOLE , Cholesterol
 605 , g , FATRN , Fatty acids trans 
 606 , g , FASAT , Fatty acids total saturated 
@@ -123,8 +123,8 @@
 662 , g , F16D1T , 16:1 
 663 , g , F18D1T , 18:1 
 664 , g , F22D1T , 22:1 
-665 , g , 18:2 , t not further defined
-666 , g , 18:2 , i 
+665 , g , 18_2a , t not further defined
+666 , g , 18_2b , i 
 669 , g , F18D2TT , 18:2 
 670 , g , F18D2CLA , 18:2 
 671 , g , F24D1C , 24:1 
@@ -144,7 +144,7 @@
 852 , g , F20D3N3 , 20:3
 853 , g , F20D3N6 , 20:3
 855 , g , F20D4N6 , 20:4
-856 , g , 18:3i , 3 
+856 , g , 18_3i , 3 
 857 , g , F21D5 , 21:5
 858 , g , F22D4 , 22:4 
 859 , g , F18D1TN7 , 18:1-11
