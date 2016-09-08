@@ -2,6 +2,8 @@
 import numpy as np
 from pandas import Series,DataFrame
 import pandas as pd
+from food.models import Food
+
 
 # foods = pd.read_csv('food/static/food/FOOD_DES.txt',sep=',',  header=None,  usecols = [0,2,4])
 # dbcol = pd.read_csv('food/static/food/nut_def.csv', sep = ',', header=None,  usecols = [1,2,4])
@@ -13,7 +15,7 @@ def load_foods(cols):
     return foods
 
 def load_defs(cols):
-    dbcol = pd.read_csv('food/static/food/nut_def.csv', sep = ',', names = cols)
+    dbcol = pd.read_csv('food/static/food/NUTR_DEF.txt', sep = ',', names = cols)
     return dbcol
     
 def load_nut(cols):
@@ -43,8 +45,32 @@ def dict_test_codes():
     test_codes = load_defs(['code','unit','abrev','name'])
     content = {}
     for index, test_code in test_codes.iterrows():
-        content[test_code['code']] =  test_code['name'].lower() + ' (' + test_code['unit'] + ')'
+        content[test_code['code']] =  str(test_code['name']) + ' (' + str(test_code['unit']) + ')'
     return content
 
-# dict_food_codes()
-print(get_values(1001, 405))
+def add_all():
+    foods = dict_food_codes()
+    tests = dict_test_codes()
+    nutrition = load_nut(['food','test','value'])
+    context = {}
+    last = nutrition['food'].iloc[0]
+    # print(tests)
+    for index, item in nutrition.iterrows():
+        if item['food'] != last:
+            # food = Food(context)
+            # food.save()
+            print(context)
+            context = {}
+            break
+        if context == {}:
+            context['id'] = item['food']
+        test_code = int(item['test'])
+        test_name = tests[test_code]
+        context[test_name] = round(item['value'], 3)
+            
+        
+        last = item['food']
+    #     print(test_code)
+    # print(tests)
+        
+add_all()
