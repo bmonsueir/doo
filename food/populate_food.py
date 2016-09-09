@@ -2,7 +2,7 @@
 import numpy as np
 from pandas import Series,DataFrame
 import pandas as pd
-from food.models import Food
+from food.models import Food, Nutrition, Test
 
 
 # foods = pd.read_csv('food/static/food/FOOD_DES.txt',sep=',',  header=None,  usecols = [0,2,4])
