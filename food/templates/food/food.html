@@ -1,0 +1,18 @@
+{% extends 'intro/navigation.html' %}
+{% block title %} Nutritional Database {% endblock %}
+{% block body %}
+
+
+  <div class = 'text-center'>
+    <h1>Foods and Nutritional Information</h1>
+  </div>
+  
+  <form method="POST">
+    <select name="item_id">
+    {% for entry in items %}
+        <option value="{{ entry.id }}">{{ entry.name }}</option>
+    {% endfor %}
+    </select>
+  </form>
+  
+{% endblock %}
