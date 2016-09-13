@@ -18,7 +18,11 @@ from django.template.context import RequestContext
 def food(request):
     item  = Food.objects.all() #when you have sth to filter ;)
     form = request.POST
-    
+    q = request.GET.get('item_id')
+    if request.GET:
+        values = request.GET
+        print (values)
+    print(q)
     # you can remove the preview assignment (form =request.POST)
     if request.method == 'POST':
         selected_item = get_object_or_404(Food, pk=request.POST.get('item_id'))
