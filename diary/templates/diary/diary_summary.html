@@ -1,0 +1,22 @@
+{% extends 'intro/navigation.html' %}
+
+{% block body %}
+
+
+  <div class = 'text-center'>
+    <h1>Summary</h1>
+  </div>
+  
+  <div class = "summary">
+    <ol>
+      {% for meal in meals %}
+      <li>{{meal.food}} {{ meal.amount }} {{ meal.description }} on {{ meal.timeOf }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+  <div class = "addToDiary">
+      <button class = "btn btn-info"><a href="{% url 'diary:diary_input' %}">Add to Diary</a></button>
+      
+  </div>
+
+{% endblock %}

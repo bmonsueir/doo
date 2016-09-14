@@ -7,5 +7,13 @@
     <h1>Tutorials</h1>
   </div>
   
+  <div class = "tutorial">
+    <ol>
+      {% for tutorial in tutorials %}
+      <li><a href = "{{tutorial.link}}">{{ tutorial.name }}</a> - {{ tutorial.description }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+  
 
 {% endblock %}

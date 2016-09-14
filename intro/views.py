@@ -4,8 +4,7 @@ from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q #what is?
-# from .forms import ChemicalForm, SpecificationForm, AttributeForm
-# from .models import Chemical, Specification, Attribute
+from .models import Tutorial
 import simplejson as json
 from django.http import HttpResponse
 from django.template.context import RequestContext
@@ -18,7 +17,8 @@ def about(request):
     return render(request, 'intro/about.html')
     
 def tutorial(request):
-    return render(request, 'intro/tutorial.html')
+    tutorials = Tutorial.objects.all()
+    return render(request, 'intro/tutorial.html', {"tutorials": tutorials})
 
 def logout_user(request):
     logout(request)
@@ -58,7 +58,7 @@ def register(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                # chemical = Chemical.objects.filter(user=request.user)
+                
                 return render(request, 'intro/home.html')
     context = {
         "form": form,

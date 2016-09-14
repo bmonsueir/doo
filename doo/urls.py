@@ -23,7 +23,7 @@ from intro import views
 urlpatterns = [
     url(r'^', include('intro.urls', namespace = 'intro')),
     # url(r'^blog/', include('blog.urls', namespace = 'blog')),
-    # url(r'^diary/', include('diary.urls', namespace = 'diary')),
+    url(r'^diary/', include('diary.urls', namespace = 'diary')),
     url(r'^food', include('food.urls', namespace = 'food')),
     # url(r'^forum/', include('forum.urls', namespace = 'forum')),
     # url(r'^/plan', include('plan.urls', namespace = 'plan')),
