@@ -45,7 +45,12 @@
             <ul class="nav navbar-nav navbar-right">
                 {% block add %}   {% endblock %}>
                 <li>
-                    <a href="{% url 'intro:home' %}">
+                    <a href="{% url 'intro:about' %}">
+                        <span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp; About
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'intro:tutorial' %}">
                         <span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp; Tutorials
                     </a>
                 </li>

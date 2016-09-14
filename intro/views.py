@@ -13,6 +13,12 @@ from .forms import UserForm
 
 def home(request):
     return render(request, 'intro/home.html')
+    
+def about(request):
+    return render(request, 'intro/about.html')
+    
+def tutorial(request):
+    return render(request, 'intro/tutorial.html')
 
 def logout_user(request):
     logout(request)
