@@ -3,34 +3,18 @@
 
 
 {% block body %}
-<div class = "container">
-     <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-body">
+<div class = "row text-center diary_input">
+  <button class = "btn btn-info"><a href="{% url 'diary:meal_input' %}">Record Meals</a></button>
+  </div>
 
+<div class = "row text-center diary_input">
+  <button class = "btn btn-info"><a href="{% url 'diary:movement_input' %}">Record Activites</a></button>
+  </div>
 
+<div class = "row text-center diary_input">
+  <button class = "btn btn-info"><a href="{% url 'diary:condition_input' %}">Record Condition</a></button>
+  </div>
 
-<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <table class="table table-bordered">
-                            {% for field in form %}
-                            <th><span class = "errmesg">{{ field.errors }}</span>{{ field.label_tag }}</th>
-                             {% endfor %}
-                             <th>Edit</th>
-                            
-
-                            <tr>
-                                {% for field in form %}
-                                <td>{{ field }}</td>
-                                  {% endfor %}
-                                  <td><button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add</button></td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </div>
-        </div>
-</div>
 
 
 {% endblock %}

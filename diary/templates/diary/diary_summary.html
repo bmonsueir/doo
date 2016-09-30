@@ -4,18 +4,23 @@
 
 
   <div class = 'text-center'>
-    <h1>Summary</h1>
+    <h1>Summary&nbsp; <button class = "btn btn-success"><a href="{% url 'diary:diary_details' %}">Get Details</a></button></h1>
   </div>
   
   <div class = "summary">
-    <ol>
+    <table class="table table-bordered">
+        <caption>Meals</caption>
+        <th>Item</th><th>Amount (g)</th><th>Description (if needed)</th><th>Date/Time</th><th>Calories</th><th>Carbs</th>
       {% for meal in meals %}
-      <li>{{meal.food}} {{ meal.amount }} {{ meal.description }} on {{ meal.timeOf }}</li>
+      <tr>
+      <td>{{meal.food}} </td><td>{{ meal.amount }}</td> <td>{{ meal.description }} </td><td>{{ meal.timeOf }}</td><td></td><td></td>
+      </tr>
       {% endfor %}
-    </ol>
-  </div>
+    </table>
+    
+  
   <div class = "addToDiary">
-      <button class = "btn btn-info"><a href="{% url 'diary:diary_input' %}">Add to Diary</a></button>
+      <button class = "btn btn-danger"><a href="{% url 'diary:diary_input' %}">Add to Diary</a></button>
       
   </div>
 

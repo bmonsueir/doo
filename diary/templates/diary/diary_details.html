@@ -1,0 +1,47 @@
+{% extends 'intro/navigation.html' %}
+
+{% block body %}
+
+
+  <div class = 'text-center'>
+    <h1>Detailed List</h1>
+  </div>
+  
+  <div class = "summary">
+    <table class="table table-bordered">
+        <caption>Meals</caption>
+        <th>Item</th><th>Amount (g)</th><th>Description (if needed)</th><th>Date/Time</th><th>Calories</th><th>Carbs</th>
+      {% for meal in meals %}
+      <tr>
+      <td>{{meal.food}} </td><td>{{ meal.amount }}</td> <td>{{ meal.description }} </td><td>{{ meal.timeOf }}</td><td></td><td></td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+    <table class="table table-bordered">
+        <caption>Activities</caption>
+        <th>Item</th><th>Time (minutes)</th><th>Description (if needed)</th><th>Date/Time</th><th>Calories burned</th><th>Carbs burned</th>
+      {% for movement in movements %}
+      <tr>
+      <td>{{movement.name}} </td><td>{{ movement.amount }}</td> <td>{{ movement.description }} </td><td>{{ movement.timeOf }}</td><td></td><td></td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+    <table class="table table-bordered">
+        <caption>Condition</caption>
+        <th>Health</th><th>Weight</th><th>Height</th><th>Date/Time</th>
+      {% for condition in conditions %}
+      <tr>
+      <td>{{condition.health}} </td><td>{{ condition.weight }}</td> <td>{{ condition.height }} </td><td>{{ meal.timeOf }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+  </div>
+  <div class = "addToDiary">
+      <button class = "btn btn-info"><a href="{% url 'diary:diary_input' %}">Add to Diary</a></button>
+      
+  </div>
+
+{% endblock %}

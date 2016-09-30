@@ -10,6 +10,8 @@ class Food(models.Model):
     description = models.CharField( max_length=255, )
     code = models.IntegerField(default = 0)
     group = models.IntegerField(default = 0)
+    class Meta:
+        ordering = ["name"]
    
     def __str__(self):
         return self.name 

@@ -13,7 +13,8 @@ class Meal(models.Model):
     description = models.CharField( max_length=255, )
     client = models.ForeignKey(User, default=1)
     timeOf = models.DateTimeField('date created', default=datetime.now)
-    
+    class Meta:
+        ordering = ["timeOf"]    
     def __str__(self):
         return self.food 
         
@@ -23,6 +24,8 @@ class Condition(models.Model):
     client = models.ForeignKey(User, default=1)
     height = models.CharField(max_length=255, )
     timeOf = models.DateTimeField('date created', default=datetime.now)
+    class Meta:
+        ordering = ["timeOf"]
     
     def __str__(self):
         return self.name 
@@ -33,7 +36,10 @@ class Movement(models.Model):
     description = models.CharField( max_length=255, )
     amount = models.IntegerField(default = 0)
     timeOf = models.DateTimeField('date created', default=datetime.now)
-
+    
+    class Meta:
+        ordering = ["timeOf"]
+        
     def __str__(self):
         return self.name 
         

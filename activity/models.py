@@ -13,6 +13,9 @@ class Activity(models.Model):
     weight4 = models.IntegerField(default = 0)
    # weight1 = 130lbs, weight2 = 155lbs, weight3 = 180lbs and weight4 = 205lbs
    # calories burned are per hour 
+    class Meta:
+        ordering = ["exercise"]
+        
     def __str__(self):
         return self.exercise 
    

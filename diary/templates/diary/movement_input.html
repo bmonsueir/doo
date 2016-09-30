@@ -1,0 +1,27 @@
+{% extends 'intro/navigation.html' %}
+{% block title %} Add to Diary{% endblock %}
+
+
+{% block body %}
+<h1>Activities</h1>
+<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table class="table table-bordered">
+        {% for field in form %}
+        <th><span class = "errmesg">{{ field.errors }}</span>{{ field.label_tag }}</th>
+         {% endfor %}
+         <th>Edit</th>
+        
+
+        <tr>
+            {% for field in form %}
+            <td>{{ field }}</td>
+              {% endfor %}
+              <td><button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add</button></td>
+        </tr>
+    </table>
+</form>
+
+
+
+{% endblock %}
