@@ -1,0 +1,16 @@
+{% extends 'intro/navigation.html' %}
+{% block title %} Blog {% endblock %}
+{% block body %}
+
+
+  <div class = 'text-center'>
+    <h1>Latest Blogs</h1>
+  </div>
+  
+ 
+    {% for post in object_list %}
+        <h5 {{ post.date|date:"Y-m-d" }}><a href="/blog/{{post.id}}"> {{ post.title }}</a></h5>
+    {% endfor %}
+ 
+  
+{% endblock %}
