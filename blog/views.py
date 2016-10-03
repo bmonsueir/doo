@@ -1,10 +1,11 @@
+#post
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q #what is?
 from .forms import BlogForm
-from .models import Post
+from .models import Post, Comment
 import simplejson as json
 from django.http import HttpResponse
 from django.template.context import RequestContext
@@ -34,11 +35,13 @@ def post(request, post_id):
         return render(request, 'intro/login.html')
     else:
         post = get_object_or_404(Post, id = post_id)
+        all_comments = Comment.objects.all().filter(post = post_id)
         content = {
             'post_title': post.title,
             'post_body': post.body,
             'post_date': post.date,
-            'post_user': post.user
+            'post_user': post.user,
+            'all_comment': all_comments
         }
         print(post)
     return render(request, 'blog/post.html', content)

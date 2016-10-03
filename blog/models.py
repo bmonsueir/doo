@@ -10,10 +10,21 @@ class Post(models.Model):
     body = models.TextField( max_length=255, )
     date = models.DateTimeField('date created', default=datetime.now)
     user = models.ForeignKey(User)
+    
+    class Meta:
+        get_latest_by = "date"
 
     def get_absolute_url(self):
         return reverse('blog: post', {'blog_id': self.id })
 
-   
     def __str__(self):
-        return self.title 
+        return self.title
+        
+class Comment(models.Model):
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+    text = models.TextField( max_length=255, )
+    date = models.DateTimeField('date created', default=datetime.now)
+    user = models.ForeignKey(User)
+
+    def __str__(self):
+        return self.text
