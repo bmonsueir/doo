@@ -1,0 +1,16 @@
+{% extends 'intro/navigation.html' %}
+{% block title %} Blog {% endblock %}
+{% block body %}
+
+
+  <div class = 'text-center'>
+    <h1>{{ post_title }}</h1>
+  </div>
+  
+        <h2>Create on {{ post_date|date:"Y-m-d" }} by {{ post_user }} </h2>
+ <div class = "postBody">
+     {{ post_body}}
+     
+ </div>
+  
+{% endblock %}

@@ -9,5 +9,18 @@
   <div class = "row text-center">
   <button class = "btn btn-info"><a href="{% url 'intro:tutorial' %}">Learn More</a></button>
   </div>
+  
+  
+   
+
+  <div class = "blogs">
+     <h3>Latest Blogs</h3>
+    
+     <ul>
+        {% for post in all_post %}
+            <li> On {{ post.date|date:"Y-m-d" }} {{post.user }} wrote <a href="{% url 'blog:post' post.id %}"> {{ post.title }}</a></li>
+        {% endfor %}
+     </ul>
+  </div>
 
 {% endblock %}

@@ -5,13 +5,23 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q #what is?
 from .models import Tutorial
+from blog.models import Post
 import simplejson as json
 from django.http import HttpResponse
 from django.template.context import RequestContext
 from .forms import UserForm
 
 def home(request):
-    return render(request, 'intro/home.html')
+    if not request.user.is_authenticated():
+        return render(request, 'intro/login.html')
+    else:
+        all_post = Post.objects.all()[:10]
+       
+        context = {
+            'all_post': all_post,
+        }
+        
+    return render(request, 'intro/home.html', context)
     
 def about(request):
     return render(request, 'intro/about.html')
@@ -64,3 +74,4 @@ def register(request):
         "form": form,
     }
     return render(request, 'intro/register.html', context)
+    
