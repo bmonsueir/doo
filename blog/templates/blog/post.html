@@ -12,14 +12,19 @@
      {{ post_body}}
      
  </div>
- 
+  
  <div class = "comments">
+     {% if all_comments %}
    <h4> Comments</h4>
    <ul>
+   
    {% for comment in all_comments %}
    <li>{{ comment}}</li>
    {% endfor %}
    </ul>
+   {% else %}
+     <h4>Be the first to comment</h4>
+  {% endif %}
  </div>
-  
+
 {% endblock %}

@@ -10,10 +10,7 @@ class Post(models.Model):
     body = models.TextField( max_length=255, )
     date = models.DateTimeField('date created', default=datetime.now)
     user = models.ForeignKey(User)
-    
-    class Meta:
-        get_latest_by = "date"
-
+   
     def get_absolute_url(self):
         return reverse('blog: post', {'blog_id': self.id })
 
@@ -28,3 +25,12 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+        
+class Photo(models.Model):
+    post = models.ForeignKey(Post)
+    pic = models.ImageField(upload_to ='images')
+    
+class Video(models.Model):
+    post = models.ForeignKey(Post)
+    vid = models.FileField(upload_to = 'videos')
+    

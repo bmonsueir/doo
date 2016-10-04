@@ -6,7 +6,7 @@ from django.db import models
 from datetime import datetime
 
 class Forum(models.Model):
-    ref = models.ForeignKey('self', on_delete=models.CASCADE)
+    ref = models.ForeignKey('self', on_delete=models.CASCADE, default=None, blank=True, null=True)
     text = models.TextField( max_length=255, )
     date = models.DateTimeField('date created', default=datetime.now)
     user = models.ForeignKey(User)

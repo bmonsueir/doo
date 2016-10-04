@@ -1,4 +1,4 @@
-#post
+#blog
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.http import JsonResponse
@@ -41,7 +41,7 @@ def post(request, post_id):
             'post_body': post.body,
             'post_date': post.date,
             'post_user': post.user,
-            'all_comment': all_comments
+            'all_comments': all_comments
         }
         print(post)
     return render(request, 'blog/post.html', content)

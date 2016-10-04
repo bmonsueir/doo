@@ -1,0 +1,16 @@
+{% extends 'intro/navigation.html' %}
+{% block title %} Forum {% endblock %}
+{% block body %}
+
+
+  <div class = 'text-center'>
+    <h1>Forum</h1>
+  </div>
+  <div class = "forums">
+     <ul>
+        {% for forum in all_forums %}
+            <li> On {{ forum.date|date:"Y-m-d" }} {{forum}} wrote  {{ forum.text }}</li>
+        {% endfor %}
+     </ul>
+  </div>
+{% endblock %}

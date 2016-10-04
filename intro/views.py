@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models import Q #what is?
 from .models import Tutorial
 from blog.models import Post
+from forum.models import Forum
 import simplejson as json
 from django.http import HttpResponse
 from django.template.context import RequestContext
@@ -16,9 +17,10 @@ def home(request):
         return render(request, 'intro/login.html')
     else:
         all_post = Post.objects.all()[:10]
-       
+        all_forums = Forum.objects.all()[:10]
         context = {
             'all_post': all_post,
+            'all_forums': all_forums,
         }
         
     return render(request, 'intro/home.html', context)
